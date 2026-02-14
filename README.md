@@ -85,10 +85,10 @@ cd tink-her-hack-temp]
 
 ![Screenshot1](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(1).png?raw=true)
 HOME PAGE
-![Screenshot2]((https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(3).png?raw=true)e)
+![Screenshot2](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(3).png?raw=true)
 MOOD CHECK PAGE
 
-![Screenshot3](](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(4).png?raw=true))
+![Screenshot3](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(4).png?raw=true)
 INSTANT CALM PAGE
 
 #### Diagrams
