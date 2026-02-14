@@ -2,27 +2,26 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [mindmirror] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: []
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Shahana M] - [PPTM ARTS AND SCIENCE COLLEGE CHERUR]
+- Member 2: [Razzana mariyam N] - [PPTM ARTS AND SCIENCE COLLEGE CHERUR]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[(https://shahana9037.github.io/tink-her-hack-temp/)]
 
 ### Project Description
-[2-3 lines about what your project does]
-
+[we help and heal our mental health]
 ### The Problem statement
-[What problem are you solving?]
+[millions experience stress daily,but therapy access is limited and expensive ]
 
 ### The Solution
-[How are you solving it?]
+[providind a private pocket therapist that offers mood tracking,personalized micro-solutions and instant calming tools for daily emotional support]
 
 ---
 
@@ -31,10 +30,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [e.g., JavaScript, html, css]
+- Frameworks used: [e.g., , none(lightweight client_-side architecture]
+- Libraries used: [e.g.,browser,local storage api,google fonts]
+- Tools used: [e.g., VS Code, Github, githubpages,chrome devtools]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,10 +45,10 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [daily moodtracker]
+- Feature 2: [mood history storage]
+- Feature 3: [personalized micro healing sugestion]
+- Feature 4: [instant calming tools]
 
 ---
 
@@ -59,12 +58,13 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+[git clone https://github.com/shahana9037/tink-her-hack-temp.git
+cd tink-her-hack-temp]
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+[index.html]
 ```
 
 ### For Hardware:
@@ -83,13 +83,13 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
+![Screenshot1]([Add screenshot 1 here with proper name](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(1).png?raw=true))
 *Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
+![Screenshot2]([Add screenshot 2 here with proper nam](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(3).png?raw=true)e)
 *Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
+![Screenshot3]([Add screenshot 3 here with proper name](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(4).png?raw=true))
 *Add caption explaining what this shows*
 
 #### Diagrams
@@ -97,13 +97,36 @@ List the key features of your project:
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+mindmirror follows a simple client-side architecture:
 
+User interacts with HTML interface
+
+JavaScript processes mood selection
+
+Suggestion logic maps mood → response
+
+Data saved in LocalStorage
+
+UI dynamically updates with results
+
+Flow:
+User → UI → JavaScript Logic → LocalStorage → Updated UI
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+Workflow Explanation:
 
+User opens website
+
+Selects current mood
+
+System processes input
+
+Personalized suggestions appear
+
+Mood stored for tracking
+
+User can revisit and reflect
 ---
 
 ### For Hardware:
@@ -132,7 +155,33 @@ List the key features of your project:
 ---
 
 ## Additional Documentation
+Client-Side Web Application (No Backend Required)
 
+Core Components:
+
+Frontend UI (HTML + CSS)
+
+Mood selection interface
+
+Suggestion display panel
+
+Calm tools section
+
+Logic Layer (JavaScript)
+
+Mood-to-suggestion mapping
+
+Dynamic DOM updates
+
+Data persistence logic
+
+Local Storage Layer
+
+Stores user mood entries
+
+Maintains session privacy
+
+No external database required
 ### For Web Projects with Backend:
 
 #### API Documentation
@@ -180,7 +229,47 @@ List the key features of your project:
 #### App Flow Diagram
 
 ![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
+            ┌────────────────────┐
+            │     Landing Page    │
+            │  (Welcome Screen)   │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │   Select Your Mood  │
+            │ 😊 😔 😡 😰 😴 etc. │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │   Process Mood in   │
+            │   JavaScript Logic  │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │ Personalized Micro  │
+            │   Healing Suggestion│
+            └─────────┬──────────┘
+                      │
+        ┌─────────────┼─────────────┐
+        ▼             ▼             ▼
+ ┌────────────┐ ┌────────────┐ ┌────────────┐
+ │ Breathing  │ │ Grounding  │ │ Affirmation│
+ │ Exercise   │ │ Technique  │ │  Message   │
+ └────────────┘ └────────────┘ └────────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │ Save Mood to       │
+            │ LocalStorage       │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │  View Mood History │
+            │  & Reflect         │
+            └────────────────────┘
 
 #### Installation Guide
 
@@ -400,15 +489,16 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [shahana]: [- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
+.]
+- [razzana mariyam]: [UI/UX designHealing content writingDocumentation & presentation]
+-
 
 ---
 
 ## License
 
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT] License - see the [LICENSE](LICENSE) file for details.
 
 **Common License Options:**
 - MIT License (Permissive, widely used)
