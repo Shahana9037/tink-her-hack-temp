@@ -6,7 +6,7 @@
 
 ## Basic Details
 
-### Team Name: []
+### Team Name: [HackHers]
 
 ### Team Members
 - Member 1: [Shahana M] - [PPTM ARTS AND SCIENCE COLLEGE CHERUR]
