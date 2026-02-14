@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pocket Therapist 🌱 — Your Gentle Companion</title>
+    <meta name="description"
+        content="Pocket Therapist is a calming, gamified mental wellbeing companion focused on micro-healing, emotional safety, and playful growth.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient floating particles background -->
+    <div id="particles"></div>
+
+    <div id="app-container">
+
+        <!-- ─── HEADER ─── -->
+        <header class="app-header" id="app-header">
+            <div class="header-left">
+                <button class="header-back-btn hidden" id="header-back" onclick="navigateTo('home')"
+                    aria-label="Go back">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="m12 19-7-7 7-7" />
+                    </svg>
+                </button>
+                <span id="header-title" class="header-title">Pocket Therapist</span>
+            </div>
+            <div class="growth-pill" id="growth-pill" title="Growth Points">
+                <span class="growth-icon">🌱</span>
+                <span class="growth-pts" id="growth-points">0</span>
+            </div>
+        </header>
+
+        <!-- ─── SCREENS ─── -->
+        <main id="main-content">
+
+            <!-- ====== HOME ====== -->
+            <section id="screen-home" class="screen active">
+                <div class="home-greeting">
+                    <h1 id="greeting-text">Good morning 🤍</h1>
+                    <p class="subtitle">How are you feeling today?</p>
+                </div>
+
+                <div class="tree-area">
+                    <div class="tree-glow"></div>
+                    <div class="tree-circle" id="tree-circle">
+                        <canvas id="tree-canvas" width="220" height="220"></canvas>
+                    </div>
+                    <p class="tree-label" id="tree-label">Seedling — just getting started</p>
+                    <div class="tree-progress-bar">
+                        <div class="tree-progress-fill" id="tree-progress-fill"></div>
+                    </div>
+                </div>
+
+                <nav class="feature-grid">
+                    <button class="feature-card fc-mood" onclick="navigateTo('mood')" id="nav-mood">
+                        <div class="fc-icon-wrap"><span class="fc-icon">🌈</span></div>
+                        <span class="fc-label">Mood Check</span>
+                    </button>
+                    <button class="feature-card fc-calm" onclick="navigateTo('calm')" id="nav-calm">
+                        <div class="fc-icon-wrap"><span class="fc-icon">🌬️</span></div>
+                        <span class="fc-label">Instant Calm</span>
+                    </button>
+                    <button class="feature-card fc-micro" onclick="navigateTo('micro')" id="nav-micro">
+                        <div class="fc-icon-wrap"><span class="fc-icon">🧩</span></div>
+                        <span class="fc-label">Micro Steps</span>
+                    </button>
+                    <button class="feature-card fc-confess" onclick="navigateTo('confess')" id="nav-confess">
+                        <div class="fc-icon-wrap"><span class="fc-icon">🕊️</span></div>
+                        <span class="fc-label">Let It Out</span>
+                    </button>
+                    <button class="feature-card fc-suggest" onclick="navigateTo('suggest')" id="nav-suggest">
+                        <div class="fc-icon-wrap"><span class="fc-icon">🔁</span></div>
+                        <span class="fc-label">Feel → Act</span>
+                    </button>
+                    <button class="feature-card fc-burn" onclick="navigateTo('burn')" id="nav-burn">
+                        <div class="fc-icon-wrap"><span class="fc-icon">🔥</span></div>
+                        <span class="fc-label">Burn It</span>
+                    </button>
+                </nav>
+            </section>
+
+            <!-- ====== MOOD CHECK ====== -->
+            <section id="screen-mood" class="screen">
+                <div class="screen-inner">
+                    <h2 class="screen-title">How's your heart?</h2>
+
+                    <div class="mood-card glass-card">
+                        <div class="mood-emoji" id="mood-emoji">😐</div>
+                        <p class="mood-word" id="mood-word">Okay</p>
+                        <div class="slider-track">
+                            <input type="range" min="0" max="4" value="2" step="1" class="mood-slider" id="mood-slider">
+                            <div class="slider-labels">
+                                <span>😢</span><span>😕</span><span>😐</span><span>🙂</span><span>😄</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <textarea id="mood-note" class="glass-input" placeholder="What's on your mind? (optional)"
+                        rows="3"></textarea>
+
+                    <button class="btn btn-primary" id="mood-submit" onclick="submitMood()">Check In 🤍</button>
+
+                    <!-- Weekly Pattern -->
+                    <div class="weekly-card glass-card" id="weekly-card">
+                        <h3>Your Week</h3>
+                        <div class="weekly-dots" id="weekly-dots"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== INSTANT CALM ====== -->
+            <section id="screen-calm" class="screen">
+                <div class="calm-layout">
+                    <div class="calm-center">
+                        <div class="breath-ring" id="breath-ring">
+                            <div class="breath-inner">
+                                <span class="breath-label" id="breath-label">Tap to start</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="calm-hint" id="calm-hint">Tap the circle to begin breathing</p>
+                    <button class="btn btn-ghost" id="calm-done-btn" onclick="navigateTo('home')"
+                        style="display:none;">I feel calmer ✨</button>
+                </div>
+            </section>
+
+            <!-- ====== MICRO THERAPY ====== -->
+            <section id="screen-micro" class="screen">
+                <div class="screen-inner">
+                    <h2 class="screen-title">Micro Steps 🧩</h2>
+                    <p class="screen-subtitle">Tiny tasks, big healing. No pressure.</p>
+
+                    <div class="task-stack" id="task-stack">
+                        <!-- injected -->
+                    </div>
+
+                    <div class="task-actions">
+                        <button class="btn btn-ghost" onclick="skipTask()">Skip — not today</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== ANONYMOUS CONFESSION ====== -->
+            <section id="screen-confess" class="screen">
+                <div class="screen-inner">
+                    <h2 class="screen-title">Let It Out 🕊️</h2>
+                    <p class="screen-subtitle">No profiles. No likes. Just release.</p>
+
+                    <textarea id="confess-text" class="glass-input confess-input"
+                        placeholder="Say what you need to say…" rows="5"></textarea>
+
+                    <div class="confess-actions">
+                        <button class="btn btn-soft" onclick="confessAction('release')">Release</button>
+                        <button class="btn btn-soft" onclick="confessAction('save')">Save Privately</button>
+                        <button class="btn btn-soft btn-letgo" onclick="confessAction('letgo')">Let Go</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== EMOTION-TO-ACTION ====== -->
+            <section id="screen-suggest" class="screen">
+                <div class="screen-inner">
+                    <h2 class="screen-title">What are you feeling?</h2>
+                    <p class="screen-subtitle">Type it out. We'll gently suggest something.</p>
+
+                    <div class="suggest-input-wrap glass-card">
+                        <input type="text" id="suggest-input" class="suggest-input" placeholder="I feel…" />
+                        <button class="suggest-go" onclick="getSuggestion()" aria-label="Get suggestion">→</button>
+                    </div>
+
+                    <div class="suggestions-list" id="suggestions-list">
+                        <!-- injected -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== BURN IT ====== -->
+            <section id="screen-burn" class="screen">
+                <div class="screen-inner burn-inner">
+                    <h2 class="screen-title">Burn It 🔥</h2>
+                    <p class="screen-subtitle">Write what's hurting. We'll burn it together.</p>
+
+                    <div class="burn-paper" id="burn-paper">
+                        <textarea id="burn-text" class="burn-textarea" placeholder="I'm holding onto…"></textarea>
+                        <div class="burn-overlay" id="burn-overlay"></div>
+                    </div>
+
+                    <button class="btn btn-danger" id="burn-btn" onclick="burnIt()">🔥 Burn It</button>
+                    <p class="burn-msg hidden" id="burn-msg">You don't have to hold onto this anymore 🤍</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Toast container -->
+        <div id="toast-container" class="toast-container"></div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
