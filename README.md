@@ -83,14 +83,13 @@ cd tink-her-hack-temp]
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1]([Add screenshot 1 here with proper name](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(1).png?raw=true))
-*Add caption explaining what this shows*
+![Screenshot1](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(1).png?raw=true)
+HOME PAGE
+![Screenshot2]((https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(3).png?raw=true)e)
+MOOD CHECK PAGE
 
-![Screenshot2]([Add screenshot 2 here with proper nam](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(3).png?raw=true)e)
-*Add caption explaining what this shows*
-
-![Screenshot3]([Add screenshot 3 here with proper name](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(4).png?raw=true))
-*Add caption explaining what this shows*
+![Screenshot3](](https://github.com/Shahana9037/tink-her-hack-temp/blob/main/Screenshot%20(4).png?raw=true))
+INSTANT CALM PAGE
 
 #### Diagrams
 
